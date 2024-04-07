@@ -2,3 +2,9 @@ body {
     margin:0;
     text-align: center;
 }
+
+.parallax {
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: "stack";
+}
