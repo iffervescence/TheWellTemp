@@ -1,13 +1,21 @@
-html {
+html, body {
     margin: 0;
 }
 
-.parallax {
+/*
+.container {
+    max-width: 90vw;
+    margin: auto;
+}
+*/
+
+.parallax {   
     position: relative;
+    min-height: 90vh;
     z-index: 0;
-    min-height: 100vh;
     display: grid;
     grid-template-areas: "stack";
+    background-color: black;
 }
 
 .parallax > * {
@@ -16,23 +24,35 @@ html {
     animation-timeline: scroll();
   }
 
-#svgContainer {        
-    margin: 0;
-    z-index: 5;    
+#svgContainer { 
+    height: 90vh;
+    /* For responsive, use scale to fix fitting */
+  }
+
+  .parallax__crop {
+    height: 90vh;
+    width: 100vw;
+    overflow: hidden;
+    z-index: 5;  
+    --parallax-speed: 3;  
   }
 
   .parallax__bg {
-    background-color: rgb(8, 12, 54);    
+    background-color: rgb(8, 12, 54);
     z-index: 1;    
+    --parallax-speed: -5; 
   }
 
   .parallax__mainText {
-    font-family: Roboto, Lato, Helvetica, sans-serif;
-    font-size: 3em;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 2em;
     color: white;
     z-index: 10;    
     position: relative;
-    margin: 100px;
+    left: 60%;
+    width: 30%;
+    text-align: right;
+    --parallax-speed: 5;
   }
 
   .vertical-center {
@@ -47,5 +67,37 @@ html {
     to {
       transform: 
       translateY(calc(var(--parallax-speed) * 200px));
+    }
+  }
+
+.main {
+  position: relative;
+  background-color: white;
+  margin: auto;
+  padding: 50px;
+  max-width: 1000px;
+}
+
+  .bodyText {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 1em;    
+  }
+
+/* For tablets */
+  @media only screen and (max-width: 1000px) {
+    #svgContainer {
+      scale: 2.5;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    #svgContainer {
+      scale: 3;
+    }
+  }
+
+  @media only screen and (max-width: 640px) {
+    #svgContainer {
+      scale: 3.5;
     }
   }
