@@ -9,13 +9,15 @@ html, body {
 }
 */
 
+
 .parallax {   
     position: relative;
     min-height: 90vh;
+    width: 100%;
     z-index: 0;
     display: grid;
     grid-template-areas: "stack";
-    background-color: black;
+    background-color: rgb(5, 3, 29);
 }
 
 .parallax > * {
@@ -31,7 +33,6 @@ html, body {
 
   .parallax__crop {
     height: 90vh;
-    width: 100vw;
     overflow: hidden;
     z-index: 5;  
     --parallax-speed: 3;  
@@ -41,6 +42,24 @@ html, body {
     background-color: rgb(8, 12, 54);
     z-index: 1;    
     --parallax-speed: -5; 
+  }
+
+  .parallax__bg2 {
+    background-color: rgb(8, 75, 75);
+    z-index: 1;    
+    --parallax-speed: 0; 
+  }
+
+  .parallax__logo {
+    z-index: 10;
+    position: relative;
+    left: 10%;
+    width: 20%;
+    --parallax-speed: 5;
+  }
+
+  .vertical-center > img {
+   width: 100%;
   }
 
   .parallax__mainText {
@@ -53,6 +72,20 @@ html, body {
     width: 30%;
     text-align: right;
     --parallax-speed: 5;
+  }
+
+  .parallax__text2 {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    color: white;
+    margin: 0;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);        
+    text-align: center;
+    z-index: 10;
+    --parallax-speed: 1;
   }
 
   .vertical-center {
@@ -72,32 +105,34 @@ html, body {
 
 .main {
   position: relative;
-  background-color: white;
-  margin: auto;
-  padding: 50px;
-  max-width: 1000px;
+  background-color: black;
+  margin: 0;
 }
 
   .bodyText {
+    margin: auto;
+    padding: 50px;
+    max-width: 1000px;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
-    font-size: 1em;    
+    font-size: 1em; 
+    color: white;   
   }
 
 /* For tablets */
   @media only screen and (max-width: 1000px) {
     #svgContainer {
-      scale: 2.5;
+      scale: 2;
     }
   }
 
   @media only screen and (max-width: 800px) {
     #svgContainer {
-      scale: 3;
+      scale: 2.5;
     }
   }
 
   @media only screen and (max-width: 640px) {
     #svgContainer {
-      scale: 3.5;
+      scale: 3;
     }
   }
