@@ -39,9 +39,10 @@ html, body {
   }
 
   .parallax__bg {
-    background-color: rgb(8, 12, 54);
+    background: rgb(5,12,36);
+    background: linear-gradient(0deg, rgba(5,12,36,1) 0%, rgba(8,12,24,1) 100%);
     z-index: 1;    
-    --parallax-speed: -5; 
+    --parallax-speed: 0; 
   }
 
   .parallax__bg2 {
