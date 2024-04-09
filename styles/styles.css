@@ -65,7 +65,7 @@ html, body {
 
   .parallax__mainText {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
-    font-size: 2em;
+    font-size: 2rem;
     color: white;
     z-index: 10;    
     position: relative;
@@ -102,6 +102,15 @@ html, body {
       transform: 
       translateY(calc(var(--parallax-speed) * 200px));
     }
+  }
+
+  @keyframes parallax-effect {
+    to { transform: translateY(100px) }
+  }
+  #parallax {
+    animation: parallax-effect linear both;
+    animation-timeline: scroll(block root);
+    animation-range: 0px 200px;
   }
 
 .main {
