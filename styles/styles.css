@@ -27,7 +27,8 @@ html, body {
   }
 
 #svgContainer { 
-    height: 90vh;
+    height: 100%;
+    width: 100%;
     /* For responsive, use scale to fix fitting */
   }
 
