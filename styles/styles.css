@@ -33,10 +33,11 @@ html, body {
   }
 
   .parallax__crop {
-    height: 90vh;
+    height: 90svh;
     overflow: hidden;
+    min-width: 100svw;
     z-index: 5;  
-    --parallax-speed: 3;  
+    --parallax-speed: 0;  
   }
 
   .parallax__bg {
