@@ -9,6 +9,14 @@ html, body {
 }
 */
 
+.main2 {
+  height: 1200px;
+}
+
+.mainR {
+  color: aqua;
+  height: auto;
+}
 
 .parallax {   
     position: relative;
@@ -48,6 +56,12 @@ html, body {
   }
 
   .parallax__bg2 {
+    background-color: rgb(16, 74, 107);
+    z-index: 1;    
+    --parallax-speed: 0; 
+  }
+
+  .parallax__bg3 {
     background-color: rgb(8, 75, 75);
     z-index: 1;    
     --parallax-speed: 0; 
