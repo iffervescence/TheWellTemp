@@ -51,6 +51,12 @@ html, body {
     --parallax-speed: 0;  
   }
 
+  .box {
+    height: 90svh;
+    overflow: hidden;
+    z-index: 5;
+  }
+
   .parallax__bg {
     background: rgb(5,12,36);
     background: linear-gradient(0deg, rgba(5,12,36,1) 0%, rgba(8,12,24,1) 100%);
@@ -101,6 +107,20 @@ html, body {
     margin: 0;
     position: relative;
     top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);        
+    text-align: center;
+    z-index: 10;
+    --parallax-speed: 1;
+  }
+
+  .parallax__text3 {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    color: white;
+    margin: 0;
+    position: relative;
+    top: 70%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);        
     text-align: center;
