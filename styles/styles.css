@@ -9,14 +9,17 @@ html, body {
 }
 */
 
+/*
 .main2 {
-  height: 1200px;
+  position: sticky;
+  min-height: 100svh;
+  top: 0;
 }
 
-.mainR {
-  color: aqua;
-  height: auto;
+.main21 {
+  height: 200svh;
 }
+*/
 
 .parallax {   
     position: relative;
