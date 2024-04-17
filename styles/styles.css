@@ -20,6 +20,36 @@ html, body {
     background-color: rgb(5, 3, 29);
 }
 
+.general {
+  position: relative;
+  min-height: 90vh;
+  width: 100%;
+  z-index: 0;
+  display: grid;
+  place-items: center;
+  background-color: rgb(5, 3, 29);
+}
+
+.general2 {
+  position: relative;
+  min-height: 90vh;
+  width: 100%;
+  z-index: 0;
+  display: grid;
+  place-items: center;
+  background-color: rgb(10, 59, 63);
+}
+
+.general3 {
+  position: relative;
+  min-height: 90vh;
+  width: 100%;
+  z-index: 0;
+  display: grid;
+  place-items: center;
+  background-color: rgb(10, 21, 68);
+}
+
 .parallax > * {
     grid-area: stack;
     animation: parallax linear;
@@ -40,24 +70,6 @@ html, body {
     --parallax-speed: 0;  
   }
 
-  .parallax__bg {
-    background: rgb(5,12,36);
-    background: linear-gradient(0deg, rgba(5,12,36,1) 0%, rgba(8,12,24,1) 100%);
-    z-index: 1;    
-    --parallax-speed: 0; 
-  }
-
-  .parallax__bg2 {
-    background-color: rgb(16, 74, 107);
-    z-index: 1;    
-    --parallax-speed: 0; 
-  }
-
-  .parallax__bg3 {
-    background-color: rgb(8, 75, 75);
-    z-index: 1;    
-    --parallax-speed: 0; 
-  }
 
   .parallax__logo {
     z-index: 10;
