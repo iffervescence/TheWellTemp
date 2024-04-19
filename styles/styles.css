@@ -1,168 +1,89 @@
 html, body {
     margin: 0;
+    overflow: auto;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
 }
 
-/*
-.container {
-    max-width: 90vw;
-    margin: auto;
-}
-*/
-
-
-.parallax {   
-    position: relative;
-    min-height: 90vh;
-    width: 100%;
-    z-index: 0;
+.hero {
+    background-color: rgb(9, 24, 65);
     display: grid;
-    grid-template-areas: "stack";
-    background-color: rgb(5, 3, 29);
+    grid-template-columns: 1fr repeat(3, 2fr) 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    place-items: center;
+    height: 100dvh;
+    width: 100%;    
+    overflow-x: hidden;
 }
 
-.general {
-  position: relative;
-  min-height: 90vh;
-  width: 100%;
-  z-index: 0;
-  display: grid;
-  place-items: center;
-  background-color: rgb(5, 3, 29);
+.hero > * {    
+    border: 2px solid limegreen;   
 }
 
-.general2 {
-  position: relative;
-  min-height: 90vh;
-  width: 100%;
-  z-index: 0;
-  display: grid;
-  place-items: center;
-  background-color: rgb(10, 59, 63);
+@media (max-aspect-ratio: 1/1) {
+    .hero {
+        height: 95dvh;
+    }
+
+    .hero > * {
+        border: 2px solid rgb(17, 0, 255);
+    }
 }
 
-.general3 {
-  position: relative;
-  min-height: 90vh;
-  width: 100%;
-  z-index: 0;
-  display: grid;
-  place-items: center;
-  background-color: rgb(10, 21, 68);
+@media (max-aspect-ratio: 1/2) {
+    .hero {
+        height: 120dvh;
+    }
+
+    .hero > * {
+        border: 2px solid red;
+    }
 }
 
-.parallax > * {
-    grid-area: stack;
-    animation: parallax linear;
-    animation-timeline: scroll();
-  }
 
-#svgContainer { 
+.hero-bg {
+    grid-area: 1 / 1 / 6 / 6;     
     height: 100%;
     width: 100%;
-    /* For responsive, use scale to fix fitting */
-  }
-
-  .parallax__crop {
-    height: 90svh;
-    overflow: hidden;
-    min-width: 100svw;
-    z-index: 5;  
-    --parallax-speed: 0;  
-  }
-
-
-  .parallax__logo {
-    z-index: 10;
-    position: relative;
-    left: 10%;
-    width: 20%;
-    --parallax-speed: 5;
-  }
-
-  .vertical-center > img {
-   width: 100%;
-  }
-
-  .parallax__mainText {
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
-    font-size: 2rem;
-    color: white;
-    z-index: 10;    
-    position: relative;
-    left: 60%;
-    width: 30%;
-    text-align: right;
-    --parallax-speed: 5;
-  }
-
-  .parallax__text2 {
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
-    font-size: 2em;
-    color: white;
-    margin: 0;
-    position: relative;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);        
-    text-align: center;
-    z-index: 10;
-    --parallax-speed: 1;
-  }
-
-  .vertical-center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-
-  @keyframes parallax {
-    to {
-      transform: 
-      translateY(calc(var(--parallax-speed) * 200px));
-    }
-  }
-
-  @keyframes parallax-effect {
-    to { transform: translateY(100px) }
-  }
-  #parallax {
-    animation: parallax-effect linear both;
-    animation-timeline: scroll(block root);
-    animation-range: 0px 200px;
-  }
-
-.main {
-  position: relative;
-  background-color: black;
-  margin: 0;
+    overflow: hidden;    
 }
 
-  .bodyText {
-    margin: auto;
-    padding: 50px;
-    max-width: 1000px;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
-    font-size: 1em; 
-    color: white;   
-  }
+.hero-logo {
+    grid-area: 2 / 2 / 5 / 3;
+    max-height: 100%;
+    width: 100%;
+    z-index: 1; 
+}
 
-/* For tablets */
-  @media only screen and (max-width: 1000px) {
-    #svgContainer {
-      scale: 2;
-    }
-  }
+.hero-logo > img {
+    width: 100%;
+    overflow: hidden;
+}
 
-  @media only screen and (max-width: 800px) {
-    #svgContainer {
-      scale: 2.5;
-    }
-  }
+.hero-text {
+    grid-area: 2 / 4 / 5 / 5;
+    max-height: 100%;
+    width: 100%;
+    z-index: 2;
+    font-size: 2rem;
+    color: white;
+    overflow: visible; 
+}
 
-  @media only screen and (max-width: 640px) {
-    #svgContainer {
-      scale: 3;
+
+@media (max-width: 600px) {
+
+    .hero {
+        grid-template-rows: 1fr 2fr 2fr 3fr 0.5fr;
     }
-  }
+
+    .hero-logo {
+        grid-area: 2 / 2 / 3 / 5;
+    }
+
+    .hero-text {
+        grid-area: 4 / 2 / 5 / 5;
+        font-size: 1.5rem;
+    }
+}

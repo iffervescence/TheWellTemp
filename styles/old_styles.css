@@ -1,0 +1,168 @@
+html, body {
+    margin: 0;
+}
+
+/*
+.container {
+    max-width: 90vw;
+    margin: auto;
+}
+*/
+
+
+.parallax {   
+    position: relative;
+    min-height: 90vh;
+    width: 100%;
+    z-index: 0;
+    display: grid;
+    grid-template-areas: "stack";
+    background-color: rgb(5, 3, 29);
+}
+
+.general {
+  position: relative;
+  min-height: 90vh;
+  width: 100%;
+  z-index: 0;
+  display: grid;
+  place-items: center;
+  background-color: rgb(5, 3, 29);
+}
+
+.general2 {
+  position: relative;
+  min-height: 90vh;
+  width: 100%;
+  z-index: 0;
+  display: grid;
+  place-items: center;
+  background-color: rgb(10, 59, 63);
+}
+
+.general3 {
+  position: relative;
+  min-height: 90vh;
+  width: 100%;
+  z-index: 0;
+  display: grid;
+  place-items: center;
+  background-color: rgb(10, 21, 68);
+}
+
+.parallax > * {
+    grid-area: stack;
+    animation: parallax linear;
+    animation-timeline: scroll();
+  }
+
+#svgContainer { 
+    height: 100%;
+    width: 100%;
+    /* For responsive, use scale to fix fitting */
+  }
+
+  .parallax__crop {
+    height: 90svh;
+    overflow: hidden;
+    min-width: 100svw;
+    z-index: 5;  
+    --parallax-speed: 0;  
+  }
+
+
+  .parallax__logo {
+    z-index: 10;
+    position: relative;
+    left: 10%;
+    width: 20%;
+    --parallax-speed: 5;
+  }
+
+  .vertical-center > img {
+   width: 100%;
+  }
+
+  .parallax__mainText {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    color: white;
+    z-index: 10;    
+    position: relative;
+    left: 60%;
+    width: 30%;
+    text-align: right;
+    --parallax-speed: 5;
+  }
+
+  .parallax__text2 {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    color: white;
+    margin: 0;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);        
+    text-align: center;
+    z-index: 10;
+    --parallax-speed: 1;
+  }
+
+  .vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  @keyframes parallax {
+    to {
+      transform: 
+      translateY(calc(var(--parallax-speed) * 200px));
+    }
+  }
+
+  @keyframes parallax-effect {
+    to { transform: translateY(100px) }
+  }
+  #parallax {
+    animation: parallax-effect linear both;
+    animation-timeline: scroll(block root);
+    animation-range: 0px 200px;
+  }
+
+.main {
+  position: relative;
+  background-color: black;
+  margin: 0;
+}
+
+  .bodyText {
+    margin: auto;
+    padding: 50px;
+    max-width: 1000px;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 1em; 
+    color: white;   
+  }
+
+/* For tablets */
+  @media only screen and (max-width: 1000px) {
+    #svgContainer {
+      scale: 2;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    #svgContainer {
+      scale: 2.5;
+    }
+  }
+
+  @media only screen and (max-width: 640px) {
+    #svgContainer {
+      scale: 3;
+    }
+  }
