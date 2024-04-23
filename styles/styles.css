@@ -8,7 +8,7 @@ html, body {
     background-color: rgb(9, 24, 65);
     display: grid;
     grid-template-columns: 1fr repeat(3, 2fr) 1fr;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: 0.5fr, repeat(3, 1fr), 0.5fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     place-items: center;
@@ -17,30 +17,11 @@ html, body {
     overflow-x: hidden;
 }
 
+/* debug
 .hero > * {    
     border: 2px solid limegreen;   
 }
-
-@media (max-aspect-ratio: 1/1) {
-    .hero {
-        height: 95dvh;
-    }
-
-    .hero > * {
-        border: 2px solid rgb(17, 0, 255);
-    }
-}
-
-@media (max-aspect-ratio: 1/2) {
-    .hero {
-        height: 120dvh;
-    }
-
-    .hero > * {
-        border: 2px solid red;
-    }
-}
-
+*/
 
 .hero-bg {
     grid-area: 1 / 1 / 6 / 6;     
@@ -66,24 +47,75 @@ html, body {
     max-height: 100%;
     width: 100%;
     z-index: 2;
-    font-size: 2rem;
+    font-size: xx-large;
     color: white;
     overflow: visible; 
+    background: rgba(13, 21, 65, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+}
+
+.hero-text > p {    
+    margin: 2rem 2rem;
 }
 
 
 @media (max-width: 600px) {
+    .hero > * {        
+        font-size: 1.5rem;
+    }    
+}
 
+@media (max-aspect-ratio: 1/1) {
     .hero {
-        grid-template-rows: 1fr 2fr 2fr 3fr 0.5fr;
+        height: 140dvh;
+        grid-template-rows: 2fr 1fr 1fr 3fr 2fr 0.5fr;
+    }
+
+    /* debug
+    .hero > * {
+        border: 2px solid rgb(17, 0, 255);
+    }
+    */
+
+    .hero-bg {
+        grid-area: 1 / 1 / 7 / 6;     
     }
 
     .hero-logo {
         grid-area: 2 / 2 / 3 / 5;
+        text-align: center;
+    }
+
+    .hero-logo > img {
+        min-width: 30dvw;
+        max-width: 50dvw;        
     }
 
     .hero-text {
-        grid-area: 4 / 2 / 5 / 5;
-        font-size: 1.5rem;
+        grid-area: 5 / 2 / 6 / 5;
+        font-size: x-large;
     }
 }
+
+/* no longer necessary
+@media (max-aspect-ratio: 9/16) {
+    .hero {
+        height: 120dvh;
+    }
+}
+*/
+
+
+/* Need to find better way of addressing mobile landscape mode
+@media (max-width: 900px) and (orientation:landscape) {
+    .hero {
+        height: 200dvh;
+    }    
+    .hero > * {
+        border: 2px solid red;
+    }
+}
+*/
