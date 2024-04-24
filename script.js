@@ -24,5 +24,11 @@ function addAnimation() {
       duplicatedItem.setAttribute("aria-hidden", true);
       scrollerInner.appendChild(duplicatedItem);
     });
+    
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      duplicatedItem.setAttribute("aria-hidden", true);
+      scrollerInner.appendChild(duplicatedItem);
+    });
   });
 }
