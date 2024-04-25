@@ -8,18 +8,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css">
     <link rel="stylesheet" href="/styles/styles.css" type="text/css">
     <link rel="stylesheet" href="/styles/scroll.css" type="text/css">
+    <link rel="stylesheet" href="/styles/box.css" type="text/css">
+    <link rel="stylesheet" href="/styles/misc.css" type="text/css">
 
     <title>TheWell Draft website</title>
 </head>
 <body>
 
+    <div class="headerNav">
+        <nav class="navMenu">
+          <a href="#">About us</a>
+          <a href="#">Manual</a>
+          <a href="#">Pricing</a>
+          <a href="#">Decibel website</a>
+          <a href="#">Strategy</a>
+        </nav>
+      </div>
+
 
     <div class="hero">
         <div class="hero-bg">
-            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.1.5/build/spline-viewer.js"></script>
-<spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/5qNCDL76dYBZrcIY/scene.splinecode"></spline-viewer>
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.1.6/build/spline-viewer.js"></script>
+            <spline-viewer url="https://prod.spline.design/e8nhUiZqvomcbGes/scene.splinecode"></spline-viewer>
         </div>
         <div class="hero-blank-top"></div>
         <div class="hero-logo">
@@ -42,18 +55,49 @@
             <p>TheWell provides secure access to your resources,</p>
             <p>and is secure from external interference</p>
             <p>Ensuring that you can safely stream content, to up to 15 screens per box</p>
-        </div>        
-        <div class="scroller" data-speed="fast">            
-            <ul class="tag-list scroller__inner">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JS</li>
-            <li>SSG</li>
-            <li>webdev</li>
-            <li>animation</li>
-            <li>UI/UX</li>            
-            </ul>
+        </div>  
+        <div class="scroller_container">
+            <div class="scroller" data-speed="fast">
+                <div class="scroller__inner">
+                    <img class="img_m" src="tablet-svg.svg" alt="tablet" />
+                    <img class="img_l" src="laptop-svg.svg" alt="laptop" />
+                    <img class="img_s" src="mobile-svg.svg" alt="mobile" />
+                    <img class="img_l" src="monitor-svg.svg" alt="monitor" />
+                    <img class="img_m" src="tv-svg.svg" alt="tv" />
+                    <img class="img_l" src="monitor-svg2.svg" alt="monitor" />
+                    <img class="img_s" src="mobile-alt-svg2.svg" alt="mobile" />
+                </div>
+            </div>
+            <div class="scroller" data-speed="slow" data-direction="right">
+                <div class="scroller__inner">
+                    <img class="img_s" src="mobile-alt-svg.svg" alt="mobile" />
+                    <img class="img_m" src="tablet-svg.svg" alt="tablet" />
+                    <img class="img_l" src="projector-screen-svg.svg" alt="projection screen" />
+                    <img class="img_l" src="monitor-alt-svg.svg" alt="monitor" />
+                    <img class="img_s" src="mobile-alt-svg2.svg" alt="mobile" />
+                    <img class="img_m" src="browser-svg.svg" alt="browser" />
+                    <img class="img_l" src="presentation-screen-svg.svg" alt="presentation screen" />
+                </div>
+            </div>
         </div>
+    </div>
+
+    <div class="who">
+        <h1>Who is this for?</h1>
+        <div class="image-grid">
+            <img src="https://cataas.com/cat">
+            <img src="https://picsum.photos/400/600"> 
+            <img src="https://cataas.com/cat"> 
+            <img src="https://picsum.photos/600/600">
+            <img src="https://picsum.photos/600/400"> 
+            <img src="https://cataas.com/cat"> 
+            <img src="https://picsum.photos/400/600">            
+            <img src="https://picsum.photos/500/400">
+            <img src="https://cataas.com/cat">         
+        </div>
+        <p>Seekers to evangelists,<br>
+            Worshippers to preachers,<br>
+            Students to teachers</p>
     </div>
 
     <div class="box">
@@ -63,9 +107,23 @@
         </div>
         <div class="box-text">
             <p>
-                The only thing needed to enable TheWell are small boxes not much larger than a 330ml drink can, and at around the same weight too.
+                The only thing needed to enable TheWell are <span style="color:white;">small boxes not much larger than a 330ml drink can</span>, and at around the same weight too.
             </p>
         </div>
+    </div>
+
+    <div class="description">
+        <div class="description-title">
+            More info on main features
+        </div>
+        <div class="div1">Security</div>
+        <div class="div2">TheWell boxes are secure from external interference. We do this by authenticating each box with our own cloud servers. This means that you can be assured that the content being distributed is free from harmful or undesirable media.</div>
+        <div class="div3">TheWell boxes work as hotspots that users can connect to, for up to 15 users simultaneouly. Media can be easily broadcasted directly to the user's devices, without a need for physical cables for transfer or cumbersome downloading processes.</div>
+        <div class="div4">Broadcast media</div>
+        <div class="div5">Data management</div>
+        <div class="div6">TheWell can be used to teach courses - distributing course materials, and collecting completed assignments (?). And on top of that, it allows management of these courses - giving data analytics of how the courses are progressing, as well as how the students are faring. There is much more data analytics that can be done, and you can find out more about it here.</div>
+        <div class="div7">TheWell will also allow for access to XX content provders in the near future!</div>
+        <div class="div8">Access to content</div>
     </div>
 
     

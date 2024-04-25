@@ -1,8 +1,8 @@
 .box {
-    background-color: rgb(9, 24, 65);
+    background-color: rgb(5, 45, 46);
     display: grid;
-    grid-template-columns: 0.5fr repeat(4, 1fr) 0.5fr;
-    grid-template-rows: 0.5fr repeat(3, 1fr) 0.5fr;
+    grid-template-columns: 1fr 2fr repeat(3, 1fr);
+    grid-template-rows: 1fr 3fr repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     place-items: center;
@@ -14,16 +14,16 @@
 
 
 .box-box {
-    grid-area: 1 / 2 / 6 / 5;
+    grid-area: 2 / 2 / 3 / 5;
     width: 100%;
     height: 100%;
-    overflow: visible;
     z-index: 0;
 }
 
 .box-text {
-    grid-area: 3 / 4 / 5 / 6;
+    grid-area: 3 / 3 / 4 / 5;
     font-size: x-large;
+    color: gray;
     z-index: 2;
 }
 
@@ -41,7 +41,7 @@
     }
 
     .box-text {
-        grid-area: 4 / 2 / 5 / 3;
+        grid-area: 4 / 2 / 5 / 3;                
     }
 }
 
@@ -50,10 +50,6 @@
 @media (max-aspect-ratio: 9/16)  {
     .box {
         height: 80dvh
-    }
-
-    .box-box {
-        grid-area: 1 / 1 / 4 / 4; 
     }
 
     .box-text {

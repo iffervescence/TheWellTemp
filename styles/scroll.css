@@ -2,7 +2,7 @@
     --clr-neutral-100: hsl(0, 0%, 100%);
     --clr-primary-100: hsl(205, 15%, 58%);
     --clr-primary-400: hsl(215, 25%, 27%);
-    --clr-primary-800: hsl(217, 33%, 17%);
+    --clr-primary-800: hsl(218, 81%, 8%);
     --clr-primary-900: hsl(218, 33%, 9%);
   }
 
@@ -12,7 +12,7 @@
     overflow-x: hidden;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr) 0.5fr 2fr 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     place-content: center;
@@ -28,15 +28,29 @@
     text-align: left;
 }
 
-.scroller {
+.scroller_container {
     grid-area: 4 / 2 / 5 / 5;
   }
   
   .scroller__inner {
     padding-block: 1rem;
     display: flex;
-    flex-wrap: wrap;   
+    flex-wrap: wrap;        
+    align-items: center;  
     gap: 1rem;
+    height: 15dvh; 
+  }
+
+  .img_s {
+    height: 80%;
+  }
+
+  .img_m {
+    height: 90%;
+  }
+
+  .img_l {
+    height: 100%;
   }
   
   .scroller[data-animated="true"] {
@@ -76,7 +90,7 @@
   
   @keyframes scroll {
     to {
-      transform: translate(calc(-50% - 0.5rem));
+      transform: translate(calc(-33.3% - 0.33rem));
     }
   }
   
@@ -96,16 +110,15 @@
     box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
   }
   
-  /* for testing purposed to ensure the animation lined up correctly */
-  .test {
-    background: red !important;
-  }
   
 
   /* For tablets */
 @media (max-aspect-ratio: 1/1), (max-width: 1024px) {
   .scroller_wrap {
       height: 80dvh;
+  }
+  .scroller__inner {
+    height: 10dvh;
   }
 }
 
@@ -115,7 +128,9 @@
   .scroller_wrap {
       height: 80dvh
   }
-
+  .scroller__inner {
+    height: 10dvh;
+  }
   .scroller_text {
     font-size: x-large;
   }
@@ -125,5 +140,8 @@
 @media (max-height: 430px) {
   .scroller_wrap {
       height: 200dvh;
+  }
+  .scroller__inner {
+    height: 25dvh;
   }
 }
