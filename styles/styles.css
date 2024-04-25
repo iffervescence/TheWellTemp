@@ -14,8 +14,8 @@ html, body {
     grid-row-gap: 0px;
     place-items: center;
     height: 100dvh;
-    width: 100%; 
-    overflow-x: hidden;
+    width: 100dvw; 
+    overflow: hidden;
 }
 
 /*debug
