@@ -7,8 +7,8 @@
   }
 
 .scroller_wrap {
-    height: 100svh;
-    width: 100svw;
+    height: auto;
+    width: auto;
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -38,7 +38,7 @@
     flex-wrap: wrap;        
     align-items: center;  
     gap: 1rem;
-    height: 15dvh; 
+    height: 15svh; 
   }
 
   .img_s {
@@ -115,10 +115,10 @@
   /* For tablets */
 @media (max-aspect-ratio: 1/1), (max-width: 1024px) {
   .scroller_wrap {
-      height: 80dvh;
+      height: auto;
   }
   .scroller__inner {
-    height: 10dvh;
+    height: 10svh;
   }
 }
 
@@ -126,10 +126,10 @@
 /* For mobile */
 @media (max-aspect-ratio: 9/16)  {
   .scroller_wrap {
-      height: 80dvh
+      height: auto
   }
   .scroller__inner {
-    height: 10dvh;
+    height: 10svh;
   }
   .scroller_text {
     font-size: x-large;
@@ -139,9 +139,9 @@
 /* For mobile landscape mode*/
 @media (max-height: 430px) {
   .scroller_wrap {
-      height: 200dvh;
+      height: auto;
   }
   .scroller__inner {
-    height: 25dvh;
+    height: 25svh;
   }
 }
