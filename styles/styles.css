@@ -13,8 +13,8 @@ html, body {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     place-items: center;
-    height: 100dvh;
-    width: 100dvw; 
+    height: 100svh;
+    width: 100svw; 
     overflow: hidden;
 }
 
@@ -39,7 +39,7 @@ html, body {
 }
 
 .hero-logo > img {
-    min-width: 20dvw;
+    min-width: 20svw;
     max-width: 300px;
     text-align: right;
 }
@@ -88,7 +88,6 @@ html, body {
 /* For tablets */
 @media (max-aspect-ratio: 1/1), (max-width: 1024px) {
     .hero {
-        height: 100dvh;
         grid-template-rows: 2fr 1fr 1fr 2fr 2fr 1fr;
     }
 
@@ -108,7 +107,7 @@ html, body {
     }
 
     .hero-logo > img {
-        max-width: 40dvw;     
+        max-width: 40svw;     
     }
 
     .hero-blank-top {
@@ -142,12 +141,12 @@ html, body {
 /* For mobile */
 @media (max-aspect-ratio: 9/16)  {
     .hero {
-        height: 120dvh;
+        height: 120svh;
         grid-template-rows: 2fr 1fr 1fr 1fr 2fr 0.5fr;
     }
 
     .hero-logo > img {
-        max-width: 60dvw;   
+        max-width: 60svw;   
     }
 
     .hero-text {
@@ -158,7 +157,7 @@ html, body {
 /* For mobile landscape mode*/
 @media (max-height: 430px) {
     .hero {
-        height: 200dvh;
+        height: 200svh;
     }
 }
 
