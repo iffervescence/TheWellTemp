@@ -13,8 +13,8 @@ html, body {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     place-items: center;
-    height: 100svh;
-    width: 100svw; 
+    height: 100vmin;
+    width: 100%; 
     overflow: hidden;
 }
 
