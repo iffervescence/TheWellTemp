@@ -141,7 +141,7 @@ html, body {
 /* For mobile */
 @media (max-aspect-ratio: 9/16)  {
     .hero {
-        height: 120svh;
+        height: 120vmax;
         grid-template-rows: 2fr 1fr 1fr 1fr 2fr 0.5fr;
     }
 
@@ -157,7 +157,7 @@ html, body {
 /* For mobile landscape mode*/
 @media (max-height: 430px) {
     .hero {
-        height: 200svh;
+        height: 100vmax;
     }
 }
 
