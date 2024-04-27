@@ -88,6 +88,8 @@ html, body {
 /* For tablets */
 @media (max-aspect-ratio: 1/1), (max-width: 1024px) {
     .hero {
+        height: 100%;
+        width: 100%;
         grid-template-rows: 2fr 1fr 1fr 2fr 2fr 1fr;
     }
 
