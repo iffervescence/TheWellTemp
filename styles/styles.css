@@ -5,6 +5,15 @@ html, body {
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
 }
 
+.main {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    scroll-snap-type: y proximity;
+}
+
 .hero {
     background-color: rgb(9, 24, 65);
     display: grid;
@@ -144,7 +153,6 @@ html, body {
 @media (max-aspect-ratio: 9/16)  {
     .hero {
         height: 100vmax;
-        width: auto;
         grid-template-rows: 2fr 1fr 1fr 1fr 2fr 0.5fr;
     }
 
