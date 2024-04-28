@@ -70,15 +70,13 @@
 }
 
 .div3 { 
-    grid-area: 6 / 2 / 7 / 4; 
+    grid-area: 6 / 2 / 7 / 3; 
+    font-size: 3rem;
+    font-weight: bold;
 }
 
 .div4 { 
-    grid-area: 6 / 4 / 7 / 5; 
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: right;
-
+    grid-area: 6 / 3 / 7 / 5;
 }
 
 .div5 { 
@@ -93,13 +91,12 @@
 }
 
 .div7 { 
-    grid-area: 10 / 2 / 11 / 4; 
+    grid-area: 10 / 2 / 11 / 3; 
+    font-size: 3rem;
+    font-weight: bold;
 }
 
 .div8 { 
-    grid-area: 10 / 4 / 11 / 5; 
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: right;
+    grid-area: 10 / 3 / 11 / 5;     
 }
 
