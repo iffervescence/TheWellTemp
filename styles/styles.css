@@ -8,10 +8,8 @@ html, body {
 .main {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
     overflow-y: scroll;
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
 }
 
 .hero {
@@ -57,6 +55,7 @@ html, body {
     grid-area: 2 / 4 / 5 / 5;
     max-height: 100%;
     width: 100%;
+    font-weight: bold;
     z-index: 2;
     font-size: xx-large;
     color: white;
