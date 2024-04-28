@@ -11,9 +11,13 @@
 }
 
 .who > h1 {
-    grid-area: 2 / 2 / 3 / 5;
-    font-size: 5rem;
-    font-weight: bold;
+    grid-area: 2 / 2 / 3 / 5;    
+    font-size: xxx-large; 
+    font-weight: bold; 
+    background: #da8702;
+    background: linear-gradient(to right, #da8702 0%, #E2C700 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .who > p {
@@ -45,6 +49,8 @@
 .description {
     background-color: #0a0a0a;
     display: grid;
+    height: auto;
+    width: auto;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr) 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr 0.2fr repeat(2, 1fr);
     grid-column-gap: 3rem;
